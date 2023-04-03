@@ -59,7 +59,7 @@ namespace Exporter
                             user.Password = hashParser.Hash;
                             user.Salt = hashParser.Salt;
 
-                            if (hashParser.Version == 'v3')
+                            if (hashParser.Version == "v3")
                             {
                                 // See https://fusionauth.io/docs/v1/tech/apis/users#import-users for default supported hashing schemes
                                 // To add a custom hashing scheme to FusionAuth, see https://fusionauth.io/docs/v1/tech/plugins/custom-password-hashing  
@@ -116,7 +116,7 @@ namespace Exporter
                 }
             );
 
-            var filePath = "./temp/users.json";
+            var filePath = "./users.json";
             if (!Directory.Exists(Path.GetDirectoryName(filePath)))
             {
                 Directory.CreateDirectory(Path.GetDirectoryName(filePath));
